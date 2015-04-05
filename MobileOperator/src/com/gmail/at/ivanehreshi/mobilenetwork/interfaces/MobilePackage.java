@@ -1,5 +1,5 @@
 package com.gmail.at.ivanehreshi.mobilenetwork.interfaces;
 
-public interface IMobilePackage {
+public interface MobilePackage {
 
 }

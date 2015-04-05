@@ -2,10 +2,10 @@ package com.gmail.at.ivanehreshi.mobilenetwork;
 
 import java.util.Date;
 
-import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.IPhoneNumber;
+import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.PhoneNumber;
 
 public class TextMessage {
-	public IPhoneNumber sender;
+	public PhoneNumber sender;
 	public String message;
 	public Date date;
 }

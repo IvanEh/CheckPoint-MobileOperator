@@ -1,18 +1,18 @@
 package com.gmail.at.ivanehreshi.mobilenetwork;
 
-import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.IPhoneNumber;
+import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.PhoneNumber;
 
 /**
  * represents PhoneNumber of any Ukrainian mobile operator
  * @author Ivan
  */
-public class PhoneNumber implements IPhoneNumber{
+public class UAPhoneNumber implements PhoneNumber{
 	private String countryCode = "+380";
 	private String operatorCode;
 	private String number;
 	private Integer cachedHash = null; 
 	
-	public PhoneNumber(String operatorCode, String number){
+	public UAPhoneNumber(String operatorCode, String number){
 		if(!checkOperatorCode(operatorCode))
 			throw new IllegalArgumentException("Invalud operator code format");
 		

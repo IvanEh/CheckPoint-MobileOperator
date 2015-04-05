@@ -1,12 +1,12 @@
 package com.gmail.at.ivanehreshi.mobilenetwork.emulator;
 
-import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.IPhoneNumber;
+import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.PhoneNumber;
 
 public class CellPhoneEmulator {
-	private IPhoneNumber phoneNumber;
+	private PhoneNumber phoneNumber;
 	SMSLocalHistory smsLocalHistory;
 	
-	public CellPhoneEmulator(IPhoneNumber phoneNumber){
+	public CellPhoneEmulator(PhoneNumber phoneNumber){
 		this.phoneNumber = phoneNumber;
 	}
 }
