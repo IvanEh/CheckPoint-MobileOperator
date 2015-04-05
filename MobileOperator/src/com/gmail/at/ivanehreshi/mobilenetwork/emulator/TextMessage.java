@@ -1,4 +1,4 @@
-package com.gmail.at.ivanehreshi.mobilenetwork;
+package com.gmail.at.ivanehreshi.mobilenetwork.emulator;
 
 import java.util.Date;
 

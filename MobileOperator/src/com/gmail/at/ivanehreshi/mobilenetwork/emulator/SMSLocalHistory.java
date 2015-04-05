@@ -1,6 +1,5 @@
 package com.gmail.at.ivanehreshi.mobilenetwork.emulator;
 
-import com.gmail.at.ivanehreshi.mobilenetwork.TextMessage;
 
 public class SMSLocalHistory {
 	private TextMessage[] messages;

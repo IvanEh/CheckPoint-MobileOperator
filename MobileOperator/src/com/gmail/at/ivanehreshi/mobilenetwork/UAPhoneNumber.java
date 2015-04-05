@@ -1,6 +1,7 @@
 package com.gmail.at.ivanehreshi.mobilenetwork;
 
 import com.gmail.at.ivanehreshi.mobilenetwork.interfaces.PhoneNumber;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.Operators;
 
 /**
  * represents PhoneNumber of any Ukrainian mobile operator
@@ -10,9 +11,10 @@ public class UAPhoneNumber implements PhoneNumber{
 	private String countryCode = "+380";
 	private String operatorCode;
 	private String number;
-	private Integer cachedHash = null; 
+	private Integer cachedHash = null;
+	private MobileOperator operator; 
 	
-	public UAPhoneNumber(String operatorCode, String number){
+	public UAPhoneNumber(String operatorCode, String number, MobileOperator operator){
 		if(!checkOperatorCode(operatorCode))
 			throw new IllegalArgumentException("Invalud operator code format");
 		
@@ -22,6 +24,8 @@ public class UAPhoneNumber implements PhoneNumber{
 		this.operatorCode  = operatorCode;
 		this.number = number;
 		
+		this.operator = operator;
+		
 	}
 	
 	private boolean checkNumber(String number2) {
@@ -30,7 +34,7 @@ public class UAPhoneNumber implements PhoneNumber{
 		
 		int num = -1;
 		try {
-			num = Integer.valueOf(operatorCode); 
+			num = Integer.valueOf(number2); 
 		}catch(NumberFormatException e){
 			return false;
 		}
@@ -67,6 +71,11 @@ public class UAPhoneNumber implements PhoneNumber{
 		
 		cachedHash = toString().hashCode();
 		return cachedHash;
+	}
+
+	@Override
+	public MobileOperator getOperator() {
+		return operator;
 	}
 	
 }
